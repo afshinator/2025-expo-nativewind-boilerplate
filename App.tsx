@@ -10,7 +10,6 @@ import './global.css';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { ScreenContent } from 'components/ScreenContent';
 import { ThemedText } from 'components/ThemedText';
 
 export default function App() {
@@ -32,9 +31,7 @@ export default function App() {
       <SafeAreaProvider>
         <SafeAreaView
           className={`flex-1 ${currentTheme === 'dark' ? 'bg-gray-900' : 'bg-white'} items-center  `}>
-          <ScreenContent title="test" path="root">
-            <Text>test</Text>
-          </ScreenContent>
+
           <StatusBar style={currentTheme === 'dark' ? 'light' : 'dark'} />
           <Pressable onPress={toggleTheme} className="mt-4">
             <Text

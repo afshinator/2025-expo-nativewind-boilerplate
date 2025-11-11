@@ -1,8 +1,10 @@
+// ThemedText.tsx
+
 import React from 'react';
 import { Text, TextProps, StyleProp, TextStyle } from 'react-native';
 import { useColorScheme } from 'nativewind';
 
-
+const DEFAULT_CLASSES = 'text-gray-900 dark:text-gray-100';
 
 type ThemedTextProps = TextProps & {
   // Optional prop to control text size (defaulting to a common size)
@@ -37,7 +39,7 @@ export function ThemedText({
   };
 
   // Default theme color classes
-  const defaultThemeColorClass = 'text-gray-900 dark:text-gray-100';
+  const defaultThemeColorClass = DEFAULT_CLASSES;
 
   // Combine all classes, prioritizing overrides
   const combinedClassName = `${sizeClasses[size]} ${weightClasses[weight]} ${
